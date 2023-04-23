@@ -1,0 +1,122 @@
+/*전역 CSS 변수 선언*/
+:root {
+  --color-mode: 'light';
+  --color-dark: black;
+  --color-light: white;
+  --background: white;
+  --text-color: black;
+  
+  /* --music-1: #fcf6f0;
+  --music-1-light: #fcf6f0;
+  --music-1-dark: #ff784b;
+
+  --music-2: #ff9e9d;
+  --music-2-light: #ff9e9d;
+  --music-2-dark: #da463c;
+
+  --music-3: #aecbd9;
+  --music-3-light: #aecbd9;
+  --music-3-dark: #3948b1;
+
+  --music-4: #9c99a2;
+  --music-4-light: #9c99a2;
+  --music-4-dark: #1d1d1f;
+
+  --music-5: #e2f4de;
+  --music-5-light: #e2f4de;
+  --music-5-dark: #50976a; */
+}
+
+html, body{
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-color);
+  transition: background 500ms ease-in-out, color 200ms ease;
+}
+/*prefers-color-scheme CSS 미디어 특성은 사용자의 라이트 테마나 
+다크 테마를 사용하는지 탐지하는 데에 사용된다. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-mode: 'dark';
+  }
+  /* 다크 모드가 아니면(화이트 모드면) 배경은 검정, 텍스트는 흰색 */
+  :root:not([data-user-color-scheme]) {
+    --background: var(--color-dark);
+    --text-color: var(--color-light);
+    /* --music-1 : var(--music-1-light);
+    --music-2 : var(--music-2-light);
+    --music-3 : var(--music-3-light);
+    --music-4 : var(--music-4-light);
+    --music-5 : var(--music-5-light); */
+  }
+}
+
+[data-user-color-scheme="dark"] {
+  --background: var(--color-dark);
+  --text-color: var(--color-light);
+  /* --music-1 : var(--music-1-dark);
+  --music-2 : var(--music-2-dark);
+  --music-3 : var(--music-3-dark);
+  --music-4 : var(--music-4-dark);
+  --music-5 : var(--music-5-dark); */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+input {
+  background: none;
+  border: 0;
+  font-size: 1.5rem;
+
+  border-bottom: 2px solid var(--text-color);
+}
+
+input::placeholder {
+}
+
+input:focus,
+input:active {
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.music-manual {
+  position: absolute;
+  bottom: 13%;
+  left: 2%;
+  font-style: italic;
+  opacity: .7;
+  font-size: 13px;
+}

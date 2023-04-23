@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+  </head>
+
+  <body>
+    <!-- 시간/날짜 ,음악 정보 ,이름 ,main todo -->
+    <section class="center">
+      <!-- 시간 / 날짜 -->
+      <div class="js-clock clock">
+        <h3 class="clock__text">00:00</h3>
+        <h4 class="date__text"></h4>
+      </div>
+      <!-- 음악 정보 -->
+      <div class="music__info">
+        <div class="music__effects"></div>
+        <p class="music__title"></p>
+      </div>
+
+      <!-- 이름, Main todo -->
+      <div class="js-user">
+        <div class="js-name name"></div>
+        <div class="js-mainTodo mainTodo">
+        </div>
+      </div>
+    </section>
+    
+    <!-- 날씨 정보 -->
+    <div class="js-weather weather"></div>
+
+    <!-- 다크 모드 -->
+    <span class="darkmode-btn"></span>
+
+    <!-- 음악 탭 -->
+    <div class="js-musics musics">
+      <div class="music1">
+        <audio class="music" src="sound/Axol__Mars.mp3"></audio>
+      </div>
+      <div class="music2">
+        <audio class="music" src="sound/Cartoon__On&On.mp3"></audio>
+      </div>
+      <div class="music3">
+        <audio class="music" src="sound/Inukshuk__Too_Far_Gone.mp3"></audio>
+      </div>
+      <div class="music4">
+        <audio class="music" src="sound/Mendum__Save_Myself.mp3"></audio>
+      </div>
+      <div class="music5">
+        <audio class="music" src="sound/Vanze__Survive.webm"></audio>
+      </div>
+    </div>
+
+    <!-- Todo -->
+    <div class="js-todo todo">
+      <div class="todo-container-wrapper">
+        <div class="js-todoContainer todo-container">
+          <header class="js-todoHeader todo-header">
+            <div class="js-tab-list tab-list tab_active" data-tabnum="0">
+              <a href="#">To do</a>
+            </div>
+            <div class="js-tab-list tab-list" data-tabnum="1">
+              <a href="#">Done</a>
+            </div>
+          </header>
+
+          <div class="js-todoContent todo-content">
+            <ul id="todo-list" class="todoList"></ul>
+            <ul id="done-list" class="todoList"></ul>
+          </div>
+
+          <footer class="js-todoInput todo-input">
+            <form id="inputForm">
+              <input type="text" id="inputTodo" placeholder="New Todo" 
+              autocomplete="off"/>
+            </form>
+          </footer>
+        </div>
+        <div class="nipple"></div>
+      </div>
+      <h3 class="js-todo-h3 todo-h3">Todo</h3>
+    </div>
+    
+    <!-- manual -->
+    <div class="music-manual">
+      <span>If you wanna enjoy a day with music, Tap the colored square box!</span>
+    </div>
+
+    <script src="js/clock.js"></script>
+    <script src="js/greeting.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/bgm.js"></script>
+    <script src="js/mainTodo.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/done.js"></script>
+    <script src="js/tab.js"></script>
+  </body>
+</html>

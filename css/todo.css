@@ -1,0 +1,116 @@
+.todo {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 11%;
+  right: 2%;
+  z-index: 3;
+  font-size: large;
+}
+
+.todo-container-wrapper {
+  margin-bottom: 10px;
+}
+
+.todo-h3 {
+  text-align: end;
+  cursor: pointer;
+}
+
+.todo-h3:hover {
+  opacity: .5;
+}
+
+.nipple {
+  position: absolute;
+  right: 15px;
+  background:var(--text-color);
+  z-index: 3;
+  border-left: 7px solid var(--background);
+  border-right: 7px solid var(--background);
+  border-top: 10px solid var(--text-color);
+}
+
+.todo-container {
+  min-height: 300px;
+  width: 350px;
+  background: var(--text-color);
+  max-height: 100vw;
+  max-width: 400px;
+  min-width: 200px;
+  border-radius: 10px;
+}
+
+.todo-header {
+  height: 50px;
+  min-height: 50px;
+  display: flex;
+  background: #9c99a2;
+}
+
+.todo-content {
+  width: 100%;
+  max-height: 50vh;
+  background: var(--text-color);
+  border-radius: 10px;
+  overflow-y: auto;
+  overflow-wrap: anywhere;
+  min-height: 40vh;
+  color: var(--background);
+}
+
+.todo-content::-webkit-scrollbar{
+  width: 10px;
+}
+
+.todo-content::-webkit-scrollbar-thumb {
+  background-color: #2f3542;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+.todo-content::-webkit-scrollbar-track {
+  background-color: #9c99a2;
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 5px black;
+}
+
+
+.todo-input {
+  min-height: 5vh;
+}
+
+.toDo {
+  opacity: .7;
+  padding: 3px 0px 2px;
+  padding-left: 21px;
+  display: flex;
+}
+
+.todo-checkbox {
+  margin-right: 10px;
+}
+
+.todo-label {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+#inputTodo:focus,
+#inputTodo:active {
+  outline: none;
+  color: var(--background);
+}
+
+#inputTodo {
+  opacity: .75;
+  font-size: 1rem;
+  padding: 7px 21px calc(21px - 3px);
+  width: 85%;
+  border: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
